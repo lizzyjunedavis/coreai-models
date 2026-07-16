@@ -1,5 +1,13 @@
 # Core AI Models
 
+## What Is Core AI?
+
+Core AI is Apple's framework for on-device machine learning. The Core AI ecosystem provides tools for every stage of the workflow — from ready-to-use models and optimization through conversion, debugging, and on-device execution.
+
+![Diagram of the Core AI ecosystem. At the top, Core AI Models provides ready-to-use models and examples. Core AI Optimization and Core AI PyTorch Extensions prepare models for deployment, producing a .aimodel file. Core AI Debugger and Xcode support integration and debugging. Core AI Framework runs models on device.](docs/images/core-ai-ecosystem.png)
+
+`coreai-models` is the starting point in this pipeline. It provides ready-to-use export recipes for popular models, Python primitives for authoring custom Core AI models in PyTorch, and Swift utilities for integrating them into your apps.
+
 Model export recipes, Python primitives, and Swift runtime utilities for building on-device AI with [Core AI](https://developer.apple.com/documentation/coreai).
 
 The main components include:
