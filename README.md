@@ -1,8 +1,8 @@
 # Core AI Models
 
-## What Is Core AI?
+## What is Core AI?
 
-Core AI is a set of technologies for deploying machine learning models on Apple hardware, covering the full model deployment lifecycle: from model optimization and conversion, to debugging, to integration into your app. Models run entirely on device on Apple Silicon, with no server required.
+Core AI is a set of technologies for deploying machine learning models on Apple hardware, covering the full model deployment lifecycle: from model optimization and conversion, to debugging, to app integration. Models run entirely on device on Apple silicon, with no server required.
 
 ![Diagram of the Core AI ecosystem. At the top, Core AI Models provides ready-to-use models and examples. Core AI Optimization and Core AI PyTorch Extensions prepare models for deployment, producing a .aimodel file. Core AI Debugger and Xcode support integration and debugging. Core AI Framework runs models on device.](docs/images/core-ai-ecosystem.png)
 
@@ -10,9 +10,9 @@ The Core AI ecosystem consists of the following components:
 
 - Convert PyTorch models to the Core AI model format (`.aimodel`) using [Core AI PyTorch Extensions](https://github.com/apple/coreai-torch)
 - Compress models with quantization, palettization, and pruning using [Core AI Optimization](https://github.com/apple/coreai-optimization)
-- Load and run models in your app with the [Core AI Framework](https://developer.apple.com/documentation/coreai)
+- Load and run models in an app with the [Core AI Framework](https://developer.apple.com/documentation/coreai)
 - Inspect, debug, and profile models using [Core AI Debugger](https://developer.apple.com/documentation/coreai/inspecting-debugging-and-profiling-core-ai-models)
-- Get popular open-source non-LLM and LLM models, with conversion, re-authoring, and optimization scripts, along with Swift app integration code using [Core AI Models](https://github.com/apple/coreai-models)
+- Get popular open-source models with conversion, optimization, and Swift app integration code using [Core AI Models](https://github.com/apple/coreai-models)
 
 Model export recipes, Python primitives, and Swift runtime utilities for building on-device AI with [Core AI](https://developer.apple.com/documentation/coreai).
 
@@ -26,7 +26,7 @@ The main components include:
 | --------- | -------------------------------------------------------------------------------------------- |
 | `models/` | Model catalog with README and export recipes.                                                |
 | `python/` | Python primitives for authoring and utilities for exporting models. |
-| `swift/`  | Swift package (`coreai-models`): runtime utilities to integrate Core AI models in your app.  |
+| `swift/`  | Swift package (`coreai-models`): runtime utilities to integrate Core AI models in an app.  |
 | `skills/` | Pluggable skills that enable coding agents to leverage Core AI more effectively.             |
 
 ## Requirements
@@ -80,7 +80,7 @@ This repo includes a plugin with skills to enable coding agents to use Core AI l
 
 ### Install
 
-Installation differs depending on your coding agent of choice.
+Installation differs depending on the coding agent.
 
 #### Claude Code
 
@@ -116,7 +116,7 @@ Alternatively, register the marketplace from a local git checkout:
 codex plugin marketplace add /path/to/coreai-models
 ```
 
-Launch Codex in your workspace:
+Launch Codex in the workspace:
 
 ```
 codex
@@ -124,7 +124,7 @@ codex
 
 Install the plugin through the interactive browser: once the Codex session is
 active in your terminal, open the plugin manager by typing `/plugins`, locate the
-`coreai-models` marketplace tab (use your arrow keys or the built-in search),
+`coreai-models` marketplace tab (use the arrow keys or the built-in search),
 select `coreai-skills`, and choose Install.
 
 #### Gemini CLI
@@ -135,8 +135,8 @@ Install the extension from a local directory:
 gemini extensions install /path/to/coreai-models/skills
 ```
 
-Once installed, the skills activate automatically based on your task context,
-or you can invoke them explicitly.
+Once installed, the skills activate automatically based on task context,
+or invoke them explicitly.
 
 ## Contributing
 
@@ -146,15 +146,15 @@ Core AI Models is focused on maintaining a curated, well-tested gallery of
 models and a reliable Swift package. We are not accepting pull requests at launch while we learn how the community uses this project.
 
 If you open a pull request, it will be closed. This is not a reflection of
-the quality of your contribution but it is a deliberate scope decision for this release.
+the quality of the contribution but it is a deliberate scope decision for this release.
 
 ### What we do welcome
 
-We actively want your feedback! GitHub Issues are open for:
+Feedback is welcome! GitHub Issues are open for:
 
 - **Bug reports** — if something in the Python scripts or Swift utilities does
   not work as expected
-- **Model requests** — if you have ideas for models you would like to see, or
+- **Model requests** — ideas for models to add, or
   improvements to the workflow or Swift utilities
 
 Use the [issue templates](../../issues/new/choose) to get started.
