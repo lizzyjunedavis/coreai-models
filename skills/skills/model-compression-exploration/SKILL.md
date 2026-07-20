@@ -25,9 +25,9 @@ The deterministic helpers are unit-tested and importable. Prefer them over hand-
 | [`scripts/compression_metrics.py`](scripts/compression_metrics.py) | Theoretical size, average bitwidth, divisibility, parametrize walk |
 | [`scripts/quality_metrics.py`](scripts/quality_metrics.py) | PSNR / SNR / IoU and a per-output dispatcher |
 
-## CoreAI Opt
+## Core AI Opt
 
-CoreAI Opt (coreai-opt) is a package that helps with model compression and model optimization in a hardware-aware manner.
+Core AI Opt (coreai-opt) is a package that helps with model compression and model optimization in a hardware-aware manner.
 
 For the full coreai-opt documentation, fetch:
 `https://apple.github.io/coreai-optimization/llms-full.txt`

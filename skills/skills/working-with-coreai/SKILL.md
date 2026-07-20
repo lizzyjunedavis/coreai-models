@@ -18,7 +18,7 @@ The Core AI toolchain has extensive documentation. Use these as reference — **
 | Resource | What it covers | When to consult |
 | --------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | [coreai-torch](https://apple.github.io/coreai-torch/index.html) | TorchConverter API, externalization, composite ops, custom lowerings, Metal kernels, debugging | Export questions, API details, custom op registration |
-| [CoreAI framework](https://developer.apple.com/documentation/coreai) | AIModel, InferenceFunction, NDArray, specialization, caching | Swift runtime API, on-device integration |
+| [Core AI framework](https://developer.apple.com/documentation/coreai) | AIModel, InferenceFunction, NDArray, specialization, caching | Swift runtime API, on-device integration |
 | [coreai-build (AOT compilation)](https://developer.apple.com/documentation/coreai/compiling-core-ai-models-ahead-of-time) | Ahead-of-time compilation flags and options | Compilation questions |
 | [coreai Python API](https://apple.github.io/coreai-torch/main/coreai-core) | Python runtime: AIModel, InferenceFunction, NDArray, state management | Python runtime questions |
 | [coreai-models repo](https://github.com/apple/coreai-models) | Export recipes, Swift runtime utilities, reusable primitives | Export patterns, running models, reference implementations |
@@ -54,7 +54,7 @@ The Core AI pipeline transforms a PyTorch model into an optimized on-device asse
                   → coreai-build CLI
 
 5. RUN           Load and run on device (Swift or Python)
-                  → CoreAI framework / coreai Python API
+                  → Core AI framework / coreai Python API
 ```
 
 Steps 1 and 2 are optional — many models export directly without re-authoring or compression. Start with export, then add authoring or compression if needed (poor accuracy, poor performance, too large).
@@ -121,7 +121,7 @@ let result = outputs.remove("logits")?.ndArray
 
 For LLMs, diffusion, and other complex models, explore the Swift runtime utilities in the coreai-models repo — they provide complete inference engines, decode loops, sampling, and KV cache management that handle the complexity beyond basic `AIModel` usage.
 
-**Docs**: [CoreAI framework](https://developer.apple.com/documentation/coreai)
+**Docs**: [Core AI framework](https://developer.apple.com/documentation/coreai)
 
 ## Run (Python)
 

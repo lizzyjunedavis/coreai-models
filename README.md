@@ -2,11 +2,17 @@
 
 ## What Is Core AI?
 
-Core AI is Apple's framework for on-device machine learning. The Core AI ecosystem provides tools for every stage of the workflow — from ready-to-use models and optimization through conversion, debugging, and on-device execution.
+Core AI is a set of technologies for deploying machine learning models on Apple hardware, covering the full model deployment lifecycle: from model optimization and conversion, to debugging, to integration into your app. Models run entirely on device on Apple Silicon, with no server required.
 
 ![Diagram of the Core AI ecosystem. At the top, Core AI Models provides ready-to-use models and examples. Core AI Optimization and Core AI PyTorch Extensions prepare models for deployment, producing a .aimodel file. Core AI Debugger and Xcode support integration and debugging. Core AI Framework runs models on device.](docs/images/core-ai-ecosystem.png)
 
-`coreai-models` is the starting point in this pipeline. It provides ready-to-use export recipes for popular models, Python primitives for authoring custom Core AI models in PyTorch, and Swift utilities for integrating them into your apps.
+The Core AI ecosystem consists of the following components:
+
+- Convert PyTorch models to the Core AI model format (`.aimodel`) using [Core AI PyTorch Extensions](https://github.com/apple/coreai-torch)
+- Compress models with quantization, palettization, and pruning using [Core AI Optimization](https://github.com/apple/coreai-optimization)
+- Load and run models in your app with the [Core AI Framework](https://developer.apple.com/documentation/coreai)
+- Inspect, debug, and profile models using Core AI Debugger
+- Get popular open-source non-LLM and LLM models, with conversion, re-authoring, and optimization scripts, along with Swift app integration code using [Core AI Models](https://github.com/apple/coreai-models)
 
 Model export recipes, Python primitives, and Swift runtime utilities for building on-device AI with [Core AI](https://developer.apple.com/documentation/coreai).
 
